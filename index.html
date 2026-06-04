@@ -3,56 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Larry Thuku | Junior Developer</title>
+    <meta name="description" content="Larry Thuku – Software Developer specializing in building exceptional digital experiences with JavaScript, React, and Node.js.">
+    <title>Larry Thuku | Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
+    <div class="scroll-progress" id="scrollProgress"></div>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">&lt;Larry Thuku /&gt;</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="assets/resume.pdf" target="_blank" class="btn-resume">Resume</a></li>
+    <nav class="navbar" id="navbar">
+        <div class="logo">&lt;LT /&gt;</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about"><span>01.</span> About</a></li>
+            <li><a href="#projects"><span>02.</span> Projects</a></li>
+            <li><a href="#contact"><span>03.</span> Contact</a></li>
+            <li><a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-resume">Resume</a></li>
         </ul>
-        <div class="hamburger">
-            <i class="fas fa-bars"></i>
-        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars" id="hamburgerIcon"></i>
+        </button>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <div class="hero-content">
+        <div class="hero-content fade-up">
             <p class="greeting">Hi, my name is</p>
             <h1>Larry Thuku.</h1>
-            <h2>I build <span class="typewriter"></span></h2>
+            <h2>I build <span class="typewriter"></span><span class="cursor">|</span></h2>
             <p class="bio-short">
-                I'm a junior software developer specializing in building exceptional digital experiences.
-                Currently focused on accessible, human-centered products.
+                I'm a software developer based in Kenya with a passion for crafting clean, performant, and accessible web experiences. I turn ideas into polished digital products — one line of code at a time.
             </p>
-            <a href="#projects" class="cta-button">Check out my work</a>
+            <div class="hero-cta">
+                <a href="#projects" class="cta-button">View My Work</a>
+                <a href="assets/resume.pdf" target="_blank" rel="noopener noreferrer" class="cta-secondary">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- About Section -->
     <section id="about" class="section">
-        <h2 class="section-title">01. About Me</h2>
+        <h2 class="section-title"><span>01.</span> About Me</h2>
         <div class="about-content">
-            <div class="about-text">
-                <p>Hello! My name is Larry Thuku and I enjoy creating things that live on the internet. My interest in web development started back in 2025 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS is fun!</p>
-                <p>Fast-forward to today, I've had the privilege of working on <span class="highlight">student projects</span> and <span class="highlight">open source</span> contributions.</p>
-                
+            <div class="about-text fade-up">
+                <p>Hello! I'm Larry Thuku, a software developer with a genuine passion for building things that live on the internet. What started as curiosity — tweaking HTML and CSS — quickly grew into a full pursuit of crafting seamless, user-focused web experiences.</p>
+                <p>I've worked on a range of projects, from <span class="highlight">RESTful APIs</span> and <span class="highlight">real-time dashboards</span> to <span class="highlight">AI-enhanced platforms</span>, always prioritizing clean, maintainable code and intuitive design. When I'm not coding, I'm exploring new technologies and contributing to open-source projects.</p>
+                <p>Here are some technologies I've been working with recently:</p>
                 <div class="skills-grid">
-                    <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
+                    <div class="skill-item"><i class="fab fa-js"></i> JavaScript (ES6+)</div>
                     <div class="skill-item"><i class="fab fa-react"></i> React</div>
+                    <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
                     <div class="skill-item"><i class="fab fa-html5"></i> HTML5</div>
                     <div class="skill-item"><i class="fab fa-css3-alt"></i> CSS3</div>
-                    <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-                    <div class="skill-item"><i class="fas fa-database"></i> SQL</div>
+                    <div class="skill-item"><i class="fas fa-database"></i> PostgreSQL</div>
+                    <div class="skill-item"><i class="fab fa-git-alt"></i> Git &amp; GitHub</div>
+                    <div class="skill-item"><i class="fas fa-server"></i> REST APIs</div>
                 </div>
             </div>
         </div>
@@ -60,20 +70,20 @@
 
     <!-- Projects Section -->
     <section id="projects" class="section">
-        <h2 class="section-title">02. Some Things I've Built</h2>
+        <h2 class="section-title"><span>02.</span> Things I've Built</h2>
         <div class="projects-grid">
-            
+
             <!-- Project Card 1 -->
-            <div class="project-card">
+            <div class="project-card fade-up">
                 <div class="card-header">
-                    <i class="far fa-folder"></i>
+                    <i class="far fa-folder-open"></i>
                     <div class="card-links">
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <h3>E-Commerce Dashboard</h3>
-                <p>A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information.</p>
+                <p>A full-featured analytics dashboard for e-commerce stores. Tracks sales, revenue trends, and inventory with interactive charts and a responsive layout optimized for performance.</p>
                 <ul class="tech-stack">
                     <li>React</li>
                     <li>Node.js</li>
@@ -82,97 +92,106 @@
             </div>
 
             <!-- Project Card 2 -->
-            <div class="project-card">
+            <div class="project-card fade-up">
                 <div class="card-header">
-                    <i class="far fa-folder"></i>
+                    <i class="far fa-folder-open"></i>
                     <div class="card-links">
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
                 <h3>Task Manager API</h3>
-                <p>A RESTful API built to manage daily tasks. Features include user authentication, task prioritization, and deadline reminders.</p>
+                <p>A robust RESTful API for managing daily tasks and productivity workflows. Features JWT authentication, task prioritization, deadline reminders, and comprehensive unit tests.</p>
                 <ul class="tech-stack">
-                    <li>Express</li>
+                    <li>Express.js</li>
                     <li>MongoDB</li>
                     <li>Jest</li>
                 </ul>
             </div>
 
             <!-- Project Card 3 -->
-            <div class="project-card">
+            <div class="project-card fade-up">
                 <div class="card-header">
-                    <i class="far fa-folder"></i>
+                    <i class="far fa-folder-open"></i>
                     <div class="card-links">
-                        <a href="https://github.com/larrythuku18-lab/skyline-weather-app" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://skyline-weather-app-topaz.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                        <a href="https://github.com/larrythuku18-lab/skyline-weather-app" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
+                        <a href="https://skyline-weather-app-topaz.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <h3>Weather Tracker</h3>
-                <p>A clean interface that pulls real-time weather data from OpenWeatherMap API based on user location search.</p>
+                <h3>Skyline Weather App</h3>
+                <p>A clean, intuitive weather application that fetches real-time data from the OpenWeatherMap API. Search any city worldwide and get instant forecasts with a polished minimal interface.</p>
                 <ul class="tech-stack">
                     <li>JavaScript</li>
-                    <li>API</li>
+                    <li>OpenWeatherMap API</li>
                     <li>CSS Grid</li>
                 </ul>
             </div>
-            <!--Project Card 4 -->
-            <div class="project-card">
-                <div class="card-header"> 
-                <i class="far fa-folder"></i>
-                <div class="card-links">
-                    <a href="https://github.com/larrythuku18-lab/Golden-Fork-Restaurant0" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://golden-fork-restauranto.netlify.app" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <h3>A Restaurant Website Preview </h3>
-            <P>A restaurant web designed to take orders online and show-case a special dish offered from the restaurant took 2-weeks to build</P>
-            <ul class="tech-stack">
-                <li>Javascript</li>
-                <li>CSS</li>
-                <li>HTML</li>
-            </ul>
-        </div>
-         <!--Project Card 5 -->
-            <div class="project-card">
+
+            <!-- Project Card 4 -->
+            <div class="project-card fade-up">
                 <div class="card-header">
-                <i class="far fa-folder"></i>
-                <div class="card-links">
-                    <a href="https://github.com/larrythuku18-lab/Smart-Solar-Monitoring-Pay-As-You-Go-Energy-Platform" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://smart-solar-monitoring-pay-as-you-go.onrender.com/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                    <i class="far fa-folder-open"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/larrythuku18-lab/Golden-Fork-Restaurant0" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
+                        <a href="https://golden-fork-restauranto.netlify.app" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
                 </div>
+                <h3>Golden Fork Restaurant</h3>
+                <p>A fully responsive restaurant website featuring an interactive menu and online ordering. Designed with a focus on visual appeal, showcasing signature dishes and a seamless customer experience.</p>
+                <ul class="tech-stack">
+                    <li>JavaScript</li>
+                    <li>CSS3</li>
+                    <li>HTML5</li>
+                </ul>
             </div>
-            <h3>Smart Solar Monitoring — Pay-As-You-Go Energy Platform</h3>
-            <p>A web-based platform that lets users monitor their solar panel performance in real time and pay for energy flexibly — no large upfront cost. Designed to make clean energy accessible for off-grid households and remote communities.Enhanced with Ai technology. </p>
-            <ul class="tech-stack">
-                <li>Javascript</li>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>PlpgSQL</li>
-            </ul>
+
+            <!-- Project Card 5 -->
+            <div class="project-card fade-up">
+                <div class="card-header">
+                    <i class="far fa-folder-open"></i>
+                    <div class="card-links">
+                        <a href="https://github.com/larrythuku18-lab/Smart-Solar-Monitoring-Pay-As-You-Go-Energy-Platform" target="_blank" rel="noopener noreferrer" aria-label="GitHub repository"><i class="fab fa-github"></i></a>
+                        <a href="https://smart-solar-monitoring-pay-as-you-go.onrender.com/" target="_blank" rel="noopener noreferrer" aria-label="Live demo"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <h3>Smart Solar Monitoring Platform</h3>
+                <p>A web platform enabling off-grid households to monitor solar panel output in real time and pay for energy flexibly — no large upfront cost. AI-enhanced insights help users optimize consumption and reduce energy bills.</p>
+                <ul class="tech-stack">
+                    <li>JavaScript</li>
+                    <li>CSS3</li>
+                    <li>HTML5</li>
+                    <li>PL/pgSQL</li>
+                </ul>
+            </div>
+
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="section contact-section">
-        <h2 class="section-title">03. What's Next?</h2>
-        <h1 class="big-heading">Get In Touch</h1>
+        <h2 class="section-title centered-title"><span>03.</span> What's Next?</h2>
+        <h3 class="big-heading">Get In Touch</h3>
         <p class="contact-text">
-            I am currently looking for new opportunities. Whether you have a question or just want to say hi, my inbox is always open!
+            I'm currently open to new opportunities and exciting collaborations. Whether you have a project in mind, a question, or simply want to say hello — my inbox is always open. I'll get back to you as soon as I can!
         </p>
+        <a href="mailto:larrythuku18@gmail.com" class="cta-button">Say Hello</a>
 
-        
         <div class="social-links">
-            <a href="mailto:larrythuku18@gmail.com"><i class="fas fa-envelope"></i></a>
-            <a href="https://github.com/larrythuku18-lab"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="mailto:larrythuku18@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/larrythuku18-lab" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="Twitter / X"><i class="fab fa-twitter"></i></a>
         </div>
     </section>
 
     <footer>
-        <p>Designed & Built by Larry Thuku</p>
+        <p>Designed &amp; Built by <span class="highlight">Larry Thuku</span></p>
+        <p class="footer-sub">Built with HTML, CSS &amp; JavaScript</p>
     </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="js/script.js"></script>
 </body>
